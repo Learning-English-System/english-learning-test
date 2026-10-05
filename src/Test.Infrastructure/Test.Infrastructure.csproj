@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Confluent.Kafka" Version="2.8.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.84.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Domain\Test.Domain.csproj" />
+    <ProjectReference Include="..\Test.Contracts\Test.Contracts.csproj" />
+    <ProjectReference Include="..\Test.Application\Test.Application.csproj" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Messaging" Version="1.0.0" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Observability" Version="1.0.0" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Security" Version="1.0.0" />
+    <PackageReference Include="EnglishLearning.BuildingBlocks.Grpc" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
